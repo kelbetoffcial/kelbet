@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kelbet Casino - 3D Category Cards & JetX</title>
+    <title>Kelbet Casino - Sportsbook & Casino</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -13,451 +13,117 @@
             font-family: 'Inter', sans-serif;
             user-select: none;
         }
-
-        /* JetX Canvas Background ONLY for JetX Screen */
-        #jetx-game-screen {
-            position: relative;
-            overflow: hidden;
-            background-color: #0f172a;
-        }
-
-        #jetx-game-screen .scrolling-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 200%;
-            height: 100%;
-            background-image: url('airport-bg.jpg');
-            background-size: 50% 100%;
-            background-repeat: repeat-x;
-        }
-
-        .animating .scrolling-bg {
-            animation: scrollBg 4s linear infinite;
-        }
-
-        @keyframes scrollBg {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-
-        /* Stylish 3D Jet Flying Animation */
-        .plane-container {
-            position: absolute;
-            bottom: 35px;
-            left: 12%;
-            transition: all 0.6s ease-out;
-            z-index: 10;
-        }
-
-        .animating .plane-container {
-            animation: floatPlane 1.2s ease-in-out infinite alternate;
-        }
-
-        @keyframes floatPlane {
-            0% { transform: translateY(0px) rotate(1deg); }
-            100% { transform: translateY(-8px) rotate(3deg); }
-        }
-
-        .multiplier-text {
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
-        }
-
-        /* 3D Game Category Background Cards Styling */
-        .category-card {
-            background-size: cover;
-            background-position: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .category-card:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
-        }
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between bg-[#0b0e14]">
+<body class="bg-[#0b0e14] text-white">
 
-    <!-- Top Navigation Bar with Main Balance -->
-    <header class="bg-[#111622] border-b border-gray-800 sticky top-0 z-50 px-4 py-3">
-        <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <!-- Header Navigation -->
+    <header class="border-b border-gray-800 bg-[#121824] sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
             <div class="flex items-center space-x-8">
                 <div class="flex items-center space-x-2">
-                    <div class="bg-yellow-400 p-2 rounded-lg text-black font-extrabold text-xl">
-                        <i class="fa-solid fa-gem"></i>
-                    </div>
-                    <span class="text-2xl font-black tracking-wider text-white">kelbet</span>
+                    <i class="fa-solid fa-trophy text-amber-500 text-2xl"></i>
+                    <span class="text-2xl font-black tracking-wider text-amber-500">KELBET</span>
                 </div>
-                
-                <nav class="hidden md:flex space-x-6 text-sm font-semibold">
-                    <a href="#" class="text-yellow-400 border-b-2 border-yellow-400 pb-1">Lobby</a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">Games</a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">Wallet</a>
+                <nav class="hidden md:flex space-x-6 text-sm font-semibold uppercase tracking-wider text-gray-300">
+                    <a href="https://refpa3665.com/L?tag=d_6236955m_45415c_&site=6236955&ad=45415" target="_blank" class="hover:text-amber-500 transition">Sports</a>
+                    <a href="https://refpa3665.com/L?tag=d_6236955m_45415c_&site=6236955&ad=45415" target="_blank" class="hover:text-amber-500 transition">Live</a>
+                    <a href="https://refpa3665.com/L?tag=d_6236955m_45415c_&site=6236955&ad=45415" target="_blank" class="hover:text-amber-500 transition">Casino</a>
+                    <a href="https://refpa3665.com/L?tag=d_6236955m_45415c_&site=6236955&ad=45415" target="_blank" class="hover:text-amber-500 transition">Esports</a>
                 </nav>
             </div>
-
             <div class="flex items-center space-x-4">
-                <div class="flex items-center bg-[#1a2130] border border-gray-700 rounded-lg p-1.5 px-3 space-x-3">
-                    <div class="flex flex-col text-right">
-                        <span class="text-[10px] text-gray-400 font-bold uppercase tracking-wider">Main Balance</span>
-                        <span id="user-balance" class="text-sm font-extrabold text-green-400">25,500.00 LKR</span>
-                    </div>
-                    
-                    <button class="bg-green-600 hover:bg-green-500 text-white font-bold text-xs px-3 py-1.5 rounded-md transition flex items-center space-x-1 shadow-lg">
-                        <i class="fa-solid fa-plus"></i>
-                        <span>Deposit</span>
-                    </button>
-                </div>
-
-                <div class="flex items-center space-x-2 border-l border-gray-800 pl-4">
-                    <div class="w-9 h-9 rounded-full bg-yellow-500 flex items-center justify-center font-bold text-black border-2 border-yellow-400 cursor-pointer">
-                        SK
-                    </div>
-                </div>
+                <a href="https://refpa3665.com/L?tag=d_6236955m_45415c_&site=6236955&ad=45415" target="_blank" class="bg-amber-500 hover:bg-amber-600 text-black font-bold px-5 py-2 rounded-lg text-sm transition uppercase shadow-lg shadow-amber-500/20">Register / Play Now</a>
             </div>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto w-full flex-1 p-4 md:p-6 space-y-8">
+    <!-- Main Content Grid -->
+    <main class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-4 gap-6">
         
-        <!-- 3D Game Category Background Cards Section -->
-        <div>
-            <h2 class="text-xl font-black tracking-wide mb-4 text-gray-200">GAME CATEGORIES</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                
-                <!-- Crash Games 3D Card -->
-                <div class="category-card h-36 rounded-2xl relative overflow-hidden border border-gray-800 p-4 flex flex-col justify-end cursor-pointer"
-                     style="background-image: linear-gradient(to top, rgba(11,14,20,0.9), transparent), url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80');">
-                    <span class="text-xs font-bold text-yellow-400 uppercase tracking-widest">3D ACTION</span>
-                    <h3 class="text-lg font-black text-white">Crash Games</h3>
-                </div>
+        <!-- Sidebar - Top Sports -->
+        <aside class="bg-[#121824] p-4 rounded-xl border border-gray-800 h-fit">
+            <h3 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">Top Sports</h3>
+            <ul class="space-y-3 font-medium text-sm">
+                <li>
+                    <a href="https://refpa3665.com/L?tag=d_6236955m_45415c_&site=6236955&ad=45415" target="_blank" class="flex justify-between items-center p-2 rounded-lg hover:bg-gray-800 transition">
+                        <span>⚽ Football</span>
+                        <span class="text-xs text-gray-400 bg-gray-800 px-2 py-0.5 rounded">142</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://refpa3665.com/L?tag=d_6236955m_45415c_&site=6236955&ad=45415" target="_blank" class="flex justify-between items-center p-2 rounded-lg hover:bg-gray-800 transition">
+                        <span>🏏 Cricket</span>
+                        <span class="text-xs text-gray-400 bg-gray-800 px-2 py-0.5 rounded">28</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://refpa3665.com/L?tag=d_6236955m_45415c_&site=6236955&ad=45415" target="_blank" class="flex justify-between items-center p-2 rounded-lg hover:bg-gray-800 transition">
+                        <span>🏀 Basketball</span>
+                        <span class="text-xs text-gray-400 bg-gray-800 px-2 py-0.5 rounded">65</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://refpa3665.com/L?tag=d_6236955m_45415c_&site=6236955&ad=45415" target="_blank" class="flex justify-between items-center p-2 rounded-lg hover:bg-gray-800 transition">
+                        <span>🎾 Tennis</span>
+                        <span class="text-xs text-gray-400 bg-gray-800 px-2 py-0.5 rounded">41</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
 
-                <!-- Slots 3D Card -->
-                <div class="category-card h-36 rounded-2xl relative overflow-hidden border border-gray-800 p-4 flex flex-col justify-end cursor-pointer"
-                     style="background-image: linear-gradient(to top, rgba(11,14,20,0.9), transparent), url('https://images.unsplash.com/photo-1596838132731-3301c3fd431b?auto=format&fit=crop&w=600&q=80');">
-                    <span class="text-xs font-bold text-purple-400 uppercase tracking-widest">SLOTS</span>
-                    <h3 class="text-lg font-black text-white">3D Slots</h3>
-                </div>
-
-                <!-- Live Casino 3D Card -->
-                <div class="category-card h-36 rounded-2xl relative overflow-hidden border border-gray-800 p-4 flex flex-col justify-end cursor-pointer"
-                     style="background-image: linear-gradient(to top, rgba(11,14,20,0.9), transparent), url('https://images.unsplash.com/photo-1511193311914-0346f16efe90?auto=format&fit=crop&w=600&q=80');">
-                    <span class="text-xs font-bold text-red-400 uppercase tracking-widest">LIVE DEALERS</span>
-                    <h3 class="text-lg font-black text-white">Live Casino</h3>
-                </div>
-
-                <!-- Table Games 3D Card -->
-                <div class="category-card h-36 rounded-2xl relative overflow-hidden border border-gray-800 p-4 flex flex-col justify-end cursor-pointer"
-                     style="background-image: linear-gradient(to top, rgba(11,14,20,0.9), transparent), url('https://images.unsplash.com/photo-1606168094336-48f205276929?auto=format&fit=crop&w=600&q=80');">
-                    <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest">CARDS & ROULETTE</span>
-                    <h3 class="text-lg font-black text-white">Table Games</h3>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- JetX Game Arena Section (Airport BG Applied ONLY Here) -->
-        <div class="max-w-md mx-auto w-full space-y-3">
-            <div class="flex items-center justify-between">
-                <h2 class="text-lg font-black text-yellow-400 tracking-wider">JETX / AVIATOR ARENA</h2>
-                <span class="text-xs font-bold text-gray-400">Continuous 10s Loop</span>
-            </div>
-
-            <!-- Multiplier History Bar -->
-            <div id="history-bar" class="bg-[#0a0e17] px-2 py-1.5 flex items-center space-x-2 overflow-x-auto text-xs font-bold border border-gray-800 rounded-lg z-20">
-                <span class="bg-blue-600/20 text-blue-400 px-2 py-0.5 rounded border border-blue-500/30">1.54x</span>
-                <span class="bg-green-600/20 text-green-400 px-2 py-0.5 rounded border border-green-500/30">5.71x</span>
-                <span class="bg-yellow-500/20 text-yellow-400 px-2 py-0.5 rounded border border-yellow-500/30">28.40x</span>
-            </div>
-
-            <!-- JetX Game Screen ONLY -->
-            <div id="jetx-game-screen" class="sky-canvas h-60 w-full flex flex-col justify-center items-center relative rounded-2xl border border-gray-800 shadow-2xl">
-                <div class="scrolling-bg"></div>
-
-                <div class="relative z-20 text-center">
-                    <div id="multiplier-val" class="text-5xl font-black text-blue-400 multiplier-text">1.00x</div>
-                    <div id="status-label" class="text-xs font-bold text-white uppercase tracking-widest mt-1 drop-shadow">NEXT ROUND IN 10s...</div>
-                </div>
-
-                <!-- HD 3D Style Jet Plane SVG Vector Graphics -->
-                <div id="plane" class="plane-container">
-                    <svg width="130" height="55" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M504 256C504 250 480 230 400 220L280 200L180 40C170 25 150 20 135 30L120 40L180 185L90 170L50 110L20 110L40 190L10 256L40 322L20 402L50 402L90 342L180 327L120 472L135 482C150 492 170 487 180 472L280 312L400 292C480 282 504 262 504 256Z" fill="url(#jet_gradient)" stroke="#1e293b" stroke-width="8"/>
-                        <defs>
-                            <linearGradient id="jet_gradient" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#3B82F6"/>
-                                <stop offset="0.5" stop-color="#EF4444"/>
-                                <stop offset="1" stop-color="#F59E0B"/>
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                </div>
-            </div>
-
-            <!-- Dual Bet Controls Bar -->
-            <div class="bg-[#0f172a] p-2.5 space-y-2.5 rounded-2xl border border-gray-800 z-20">
-                
-                <!-- BET BAR 1 -->
-                <div class="bg-[#121721] p-2.5 rounded-xl border border-gray-800 space-y-2">
-                    <div class="flex justify-center bg-[#1c2331] p-0.5 rounded-full w-40 mx-auto text-xs font-bold">
-                        <button id="tab-bet-1" class="w-1/2 py-1 rounded-full bg-[#2a3447] text-white">Bet</button>
-                        <button id="tab-auto-1" class="w-1/2 py-1 rounded-full text-gray-400">Auto</button>
-                    </div>
-
-                    <div class="grid grid-cols-12 gap-2 items-center">
-                        <div class="col-span-6 space-y-1.5">
-                            <div class="flex items-center justify-between bg-[#0b0e14] rounded-lg px-3 py-1.5 border border-gray-800">
-                                <button onclick="changeBet(1, -1)" class="text-gray-400 font-extrabold text-base">-</button>
-                                <span id="bet-val-1" class="font-extrabold text-xs text-white">100.00 LKR</span>
-                                <button onclick="changeBet(1, 1)" class="text-gray-400 font-extrabold text-base">+</button>
-                            </div>
-                            <div class="grid grid-cols-4 gap-1 text-[10px] font-extrabold text-gray-300">
-                                <button onclick="setBet(1, 100)" class="bg-[#1c2331] py-1 rounded">100</button>
-                                <button onclick="setBet(1, 500)" class="bg-[#1c2331] py-1 rounded">500</button>
-                                <button onclick="setBet(1, 1000)" class="bg-[#1c2331] py-1 rounded">1000</button>
-                                <button onclick="setBet(1, 5000)" class="bg-[#1c2331] py-1 rounded">5000</button>
-                            </div>
-                        </div>
-
-                        <div class="col-span-6">
-                            <button id="btn-action-1" onclick="handleBetClick(1)" class="w-full h-14 bg-[#22c55e] hover:bg-[#16a34a] rounded-xl flex flex-col justify-center items-center shadow-lg transition">
-                                <span id="btn-label-1" class="text-base font-black text-white">Bet</span>
-                                <span id="btn-sub-1" class="text-[11px] font-extrabold text-white/90">100.00 LKR</span>
-                            </button>
-                        </div>
+        <!-- Main Banner & Content Area -->
+        <section class="md:col-span-3 space-y-6">
+            
+            <!-- Hero Banner -->
+            <div class="bg-gradient-to-r from-amber-500 to-amber-600 rounded-2xl p-8 text-black shadow-xl relative overflow-hidden">
+                <div class="max-w-md space-y-3 z-10 relative">
+                    <span class="bg-black/20 text-xs font-bold uppercase px-3 py-1 rounded-full text-black">Welcome Offer</span>
+                    <h1 class="text-3xl md:text-4xl font-extrabold uppercase tracking-tight">100% First Deposit Bonus</h1>
+                    <p class="text-sm font-medium opacity-90">Get up to 30,000 LKR bonus on your first deposit!</p>
+                    <div class="pt-2">
+                        <a href="https://refpa3665.com/L?tag=d_6236955m_45415c_&site=6236955&ad=45415" target="_blank" class="inline-block bg-black text-white hover:bg-gray-900 font-extrabold px-6 py-3 rounded-xl uppercase text-sm tracking-wider shadow-lg transition">Claim Bonus Now</a>
                     </div>
                 </div>
+            </div>
 
-                <!-- BET BAR 2 -->
-                <div class="bg-[#121721] p-2.5 rounded-xl border border-gray-800 space-y-2">
-                    <div class="flex justify-center bg-[#1c2331] p-0.5 rounded-full w-40 mx-auto text-xs font-bold">
-                        <button id="tab-bet-2" class="w-1/2 py-1 rounded-full bg-[#2a3447] text-white">Bet</button>
-                        <button id="tab-auto-2" class="w-1/2 py-1 rounded-full text-gray-400">Auto</button>
-                    </div>
-
-                    <div class="grid grid-cols-12 gap-2 items-center">
-                        <div class="col-span-6 space-y-1.5">
-                            <div class="flex items-center justify-between bg-[#0b0e14] rounded-lg px-3 py-1.5 border border-gray-800">
-                                <button onclick="changeBet(2, -1)" class="text-gray-400 font-extrabold text-base">-</button>
-                                <span id="bet-val-2" class="font-extrabold text-xs text-white">100.00 LKR</span>
-                                <button onclick="changeBet(2, 1)" class="text-gray-400 font-extrabold text-base">+</button>
-                            </div>
-                            <div class="grid grid-cols-4 gap-1 text-[10px] font-extrabold text-gray-300">
-                                <button onclick="setBet(2, 100)" class="bg-[#1c2331] py-1 rounded">100</button>
-                                <button onclick="setBet(2, 500)" class="bg-[#1c2331] py-1 rounded">500</button>
-                                <button onclick="setBet(2, 1000)" class="bg-[#1c2331] py-1 rounded">1000</button>
-                                <button onclick="setBet(2, 5000)" class="bg-[#1c2331] py-1 rounded">5000</button>
-                            </div>
-                        </div>
-
-                        <div class="col-span-6">
-                            <button id="btn-action-2" onclick="handleBetClick(2)" class="w-full h-14 bg-[#22c55e] hover:bg-[#16a34a] rounded-xl flex flex-col justify-center items-center shadow-lg transition">
-                                <span id="btn-label-2" class="text-base font-black text-white">Bet</span>
-                                <span id="btn-sub-2" class="text-[11px] font-extrabold text-white/90">100.00 LKR</span>
-                            </button>
-                        </div>
-                    </div>
+            <!-- Live Matches Cards -->
+            <div class="bg-[#121824] p-5 rounded-xl border border-gray-800 space-y-4">
+                <div class="flex items-center justify-between">
+                    <h3 class="text-sm font-bold text-gray-300 uppercase tracking-wider flex items-center space-x-2">
+                        <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                        <span>Live Matches</span>
+                    </h3>
                 </div>
 
+                <!-- Match Item -->
+                <a href="https://refpa3665.com/L?tag=d_6236955m_45415c_&site=6236955&ad=45415" target="_blank" class="block bg-[#1a2232] p-4 rounded-xl border border-gray-700/50 hover:border-amber-500/50 transition">
+                    <div class="flex justify-between items-center text-sm font-semibold">
+                        <div>
+                            <p class="text-gray-200">FC Barcelona</p>
+                            <p class="text-gray-200">Real Madrid</p>
+                            <span class="text-xs text-amber-500 font-normal">2nd Half 74'</span>
+                        </div>
+                        <div class="flex space-x-2">
+                            <div class="bg-[#0b0e14] px-3 py-2 rounded-lg text-center">
+                                <span class="block text-xs text-gray-400">1</span>
+                                <span class="text-amber-500 font-bold">2.10</span>
+                            </div>
+                            <div class="bg-[#0b0e14] px-3 py-2 rounded-lg text-center">
+                                <span class="block text-xs text-gray-400">X</span>
+                                <span class="text-amber-500 font-bold">3.40</span>
+                            </div>
+                            <div class="bg-[#0b0e14] px-3 py-2 rounded-lg text-center">
+                                <span class="block text-xs text-gray-400">2</span>
+                                <span class="text-amber-500 font-bold">2.85</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </div>
-        </div>
 
+        </section>
     </main>
 
-    <!-- Game Script for Auto 10s Loop, Balance and Extended Multipliers -->
-    <script>
-        let balance = 25500.00;
-        let bets = { 1: 100, 2: 100 };
-        let hasBet = { 1: false, 2: false };
-        let hasCashedOut = { 1: false, 2: false };
-        
-        let isFlightRunning = false;
-        let currentMultiplier = 1.00;
-        let flightTimer = null;
-        let countdownTimer = null;
-        let countdownSec = 10;
-
-        function changeBet(id, delta) {
-            if (isFlightRunning && hasBet[id]) return;
-            bets[id] = Math.max(10, bets[id] + (delta * 50));
-            updateUI(id);
-        }
-
-        function setBet(id, amount) {
-            if (isFlightRunning && hasBet[id]) return;
-            bets[id] = amount;
-            updateUI(id);
-        }
-
-        function updateUI(id) {
-            document.getElementById(`bet-val-${id}`).innerText = bets[id].toFixed(2) + " LKR";
-            if (!hasBet[id]) {
-                document.getElementById(`btn-sub-${id}`).innerText = bets[id].toFixed(2) + " LKR";
-            }
-        }
-
-        function handleBetClick(id) {
-            const btn = document.getElementById(`btn-action-${id}`);
-            const label = document.getElementById(`btn-label-${id}`);
-            const sub = document.getElementById(`btn-sub-${id}`);
-
-            if (!isFlightRunning) {
-                hasBet[id] = !hasBet[id];
-                if (hasBet[id]) {
-                    btn.className = "w-full h-14 bg-red-600 hover:bg-red-500 rounded-xl flex flex-col justify-center items-center shadow-lg transition";
-                    label.innerText = "CANCEL";
-                    sub.innerText = "Waiting...";
-                } else {
-                    btn.className = "w-full h-14 bg-[#22c55e] hover:bg-[#16a34a] rounded-xl flex flex-col justify-center items-center shadow-lg transition";
-                    label.innerText = "Bet";
-                    sub.innerText = bets[id].toFixed(2) + " LKR";
-                }
-            } else {
-                if (hasBet[id] && !hasCashedOut[id]) {
-                    hasCashedOut[id] = true;
-                    let winAmt = bets[id] * currentMultiplier;
-                    balance += winAmt;
-                    document.getElementById('user-balance').innerText = balance.toFixed(2) + " LKR";
-
-                    btn.className = "w-full h-14 bg-gray-700 rounded-xl flex flex-col justify-center items-center shadow-lg cursor-not-allowed";
-                    label.innerText = "CASHED OUT";
-                    sub.innerText = winAmt.toFixed(2) + " LKR";
-                }
-            }
-        }
-
-        function startCountdown() {
-            isFlightRunning = false;
-            countdownSec = 10;
-            const statusLabel = document.getElementById('status-label');
-            const multDisplay = document.getElementById('multiplier-val');
-            const screen = document.getElementById('jetx-game-screen');
-            const plane = document.getElementById('plane');
-
-            screen.classList.remove('animating');
-            plane.style.transform = "translate(0px, 0px) scale(1) rotate(0deg)";
-            multDisplay.className = "text-5xl font-black text-blue-400 multiplier-text";
-            multDisplay.innerText = "1.00x";
-
-            [1, 2].forEach(id => {
-                hasCashedOut[id] = false;
-                const btn = document.getElementById(`btn-action-${id}`);
-                const label = document.getElementById(`btn-label-${id}`);
-                const sub = document.getElementById(`btn-sub-${id}`);
-
-                if (hasBet[id]) {
-                    btn.className = "w-full h-14 bg-amber-500 rounded-xl flex flex-col justify-center items-center shadow-lg";
-                    label.innerText = "WAITING";
-                    sub.innerText = bets[id].toFixed(2) + " LKR";
-                } else {
-                    btn.className = "w-full h-14 bg-[#22c55e] hover:bg-[#16a34a] rounded-xl flex flex-col justify-center items-center shadow-lg transition";
-                    label.innerText = "Bet";
-                    sub.innerText = bets[id].toFixed(2) + " LKR";
-                }
-            });
-
-            countdownTimer = setInterval(() => {
-                statusLabel.innerText = `NEXT ROUND IN ${countdownSec}s...`;
-                countdownSec--;
-                if (countdownSec < 0) {
-                    clearInterval(countdownTimer);
-                    startFlight();
-                }
-            }, 1000);
-        }
-
-        function startFlight() {
-            isFlightRunning = true;
-            currentMultiplier = 1.00;
-            const statusLabel = document.getElementById('status-label');
-            const multDisplay = document.getElementById('multiplier-val');
-            const screen = document.getElementById('jetx-game-screen');
-            const plane = document.getElementById('plane');
-
-            screen.classList.add('animating');
-            statusLabel.innerText = "FLYING...";
-            plane.style.transform = "translate(100px, -60px) scale(1.08) rotate(-5deg)";
-
-            [1, 2].forEach(id => {
-                if (hasBet[id]) {
-                    balance -= bets[id];
-                    document.getElementById('user-balance').innerText = balance.toFixed(2) + " LKR";
-
-                    const btn = document.getElementById(`btn-action-${id}`);
-                    const label = document.getElementById(`btn-label-${id}`);
-                    const sub = document.getElementById(`btn-sub-${id}`);
-
-                    btn.className = "w-full h-14 bg-[#f59e0b] hover:bg-[#d97706] rounded-xl flex flex-col justify-center items-center shadow-lg transition";
-                    label.innerText = "CASH OUT";
-                    sub.innerText = (bets[id] * currentMultiplier).toFixed(2) + " LKR";
-                }
-            });
-
-            // High Multipliers Logic (10x, 20x, 30x+)
-            let rand = Math.random();
-            let crashPoint;
-            if (rand < 0.55) {
-                crashPoint = Math.random() * 8 + 1.2;
-            } else if (rand < 0.80) {
-                crashPoint = Math.random() * 15 + 9.0;
-            } else {
-                crashPoint = Math.random() * 35 + 25.0;
-            }
-
-            flightTimer = setInterval(() => {
-                currentMultiplier += 0.05;
-                let formatted = currentMultiplier.toFixed(2) + "x";
-                multDisplay.innerText = formatted;
-
-                if (currentMultiplier < 2.00) {
-                    multDisplay.className = "text-5xl font-black text-blue-400 multiplier-text";
-                } else if (currentMultiplier >= 2.00 && currentMultiplier < 10.00) {
-                    multDisplay.className = "text-5xl font-black text-green-400 multiplier-text";
-                } else {
-                    multDisplay.className = "text-5xl font-black text-yellow-400 multiplier-text";
-                }
-
-                [1, 2].forEach(id => {
-                    if (hasBet[id] && !hasCashedOut[id]) {
-                        document.getElementById(`btn-sub-${id}`).innerText = (bets[id] * currentMultiplier).toFixed(2) + " LKR";
-                    }
-                });
-
-                if (currentMultiplier >= crashPoint) {
-                    crashGame(formatted);
-                }
-            }, 100);
-        }
-
-        function crashGame(finalVal) {
-            clearInterval(flightTimer);
-            const statusLabel = document.getElementById('status-label');
-            const historyBar = document.getElementById('history-bar');
-
-            statusLabel.innerText = "CRASHED @ " + finalVal;
-
-            [1, 2].forEach(id => {
-                hasBet[id] = false;
-            });
-
-            let numVal = parseFloat(finalVal);
-            let colorClass = "bg-blue-600/20 text-blue-400 border-blue-500/30";
-            if (numVal >= 2.00 && numVal < 10.00) {
-                colorClass = "bg-green-600/20 text-green-400 border-green-500/30";
-            } else if (numVal >= 10.00) {
-                colorClass = "bg-yellow-500/20 text-yellow-400 border-yellow-500/30";
-            }
-
-            let newBadge = `<span class="${colorClass} px-2 py-0.5 rounded border font-bold">${finalVal}</span>`;
-            historyBar.insertAdjacentHTML('afterbegin', newBadge);
-
-            setTimeout(() => {
-                startCountdown();
-            }, 3000);
-        }
-
-        window.onload = function() {
-            startCountdown();
-        };
-    </script>
 </body>
 </html>
