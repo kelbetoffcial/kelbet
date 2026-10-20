@@ -3,33 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kelbet Casino - Sportsbook & Gaming Hub</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Kelbet - Official Betting & Casino Bonus</title>
     <style>
-        body { background-color: #0d1117; color: #ffffff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        .bg-card { background-color: #161b22; }
-        .btn-gold { background: linear-gradient(135deg, #f39c12, #f1c40f); color: #000; font-weight: bold; }
-        .btn-gold:hover { background: linear-gradient(135deg, #d35400, #f39c12); color: #fff; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { background-color: #0d1117; color: #ffffff; text-align: center; }
+        
+        /* Header */
+        header { background-color: #161b22; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #30363d; sticky: top; }
+        .logo { font-size: 26px; font-weight: 900; color: #f39c12; letter-spacing: 1px; }
+        .logo span { color: #ffffff; }
+        .btn-top { background: linear-gradient(135deg, #f39c12, #f1c40f); color: #000; padding: 10px 18px; text-decoration: none; font-weight: bold; border-radius: 8px; font-size: 13px; text-transform: uppercase; }
+        
+        /* Container */
+        .container { max-width: 900px; margin: 20px auto; padding: 0 15px; }
+        
+        /* Hero Banner */
+        .hero { background: linear-gradient(135deg, #f39c12, #d35400); color: #000; padding: 35px 20px; border-radius: 16px; margin-bottom: 25px; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+        .hero h2 { font-size: 32px; font-weight: 900; margin-bottom: 10px; line-height: 1.2; }
+        .hero p { font-size: 16px; font-weight: 600; margin-bottom: 20px; opacity: 0.9; }
+        .btn-claim { background: #000000; color: #f39c12; padding: 14px 28px; text-decoration: none; font-weight: bold; border-radius: 10px; font-size: 16px; display: inline-block; text-transform: uppercase; letter-spacing: 1px; }
+        
+        /* Promo Box */
+        .promo-card { background: #161b22; border: 2px dashed #f39c12; padding: 20px; border-radius: 16px; margin-bottom: 30px; }
+        .promo-title { font-size: 16px; color: #8b949e; font-weight: bold; margin-bottom: 10px; }
+        .promo-code { font-size: 30px; font-weight: 900; color: #f39c12; background: #0d1117; padding: 8px 25px; border-radius: 10px; display: inline-block; border: 1px solid #f39c12; letter-spacing: 2px; }
+        
+        /* Section Titles */
+        .section-title { text-align: left; font-size: 20px; color: #f39c12; margin-bottom: 15px; font-weight: bold; border-left: 4px solid #f39c12; padding-left: 10px; }
+        
+        /* Games Grid */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-bottom: 35px; }
+        .card { background: #161b22; padding: 20px; border-radius: 12px; border: 1px solid #30363d; transition: 0.3s; }
+        .card:hover { border-color: #f39c12; }
+        .card-title { font-size: 18px; margin-bottom: 8px; color: #ffffff; }
+        .card-desc { font-size: 12px; color: #8b949e; margin-bottom: 15px; }
+        .btn-play { background: #238636; color: #ffffff; padding: 10px; text-decoration: none; font-weight: bold; border-radius: 8px; display: block; font-size: 13px; text-transform: uppercase; }
+        
+        /* Steps Section */
+        .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 35px; }
+        .step-box { background: #161b22; padding: 20px; border-radius: 12px; border: 1px solid #30363d; }
+        .step-num { background: #f39c12; color: #000; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 10px; }
+        
+        /* Footer */
+        footer { background: #161b22; padding: 25px 15px; border-top: 1px solid #30363d; margin-top: 30px; font-size: 13px; color: #8b949e; }
+        .payment-tags { margin-top: 10px; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+        .tag { background: #21262d; padding: 5px 12px; border-radius: 6px; font-size: 11px; font-weight: bold; color: #c9d1d9; }
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between">
+<body>
 
-    <!-- Header / Navbar -->
-    <header class="bg-card border-b border-gray-800 p-4 sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-black text-yellow-500 tracking-wider">KEL<span class="text-white">BET</span></h1>
-            <nav class="hidden md:flex space-x-6 text-sm font-semibold">
-                <a href="#welcome" class="hover:text-yellow-400">HOME</a>
-                <a href="#games" class="hover:text-yellow-400">GAMES</a>
-                <a href="#promotions" class="hover:text-yellow-400">PROMO CODE</a>
-                <a href="#how-to" class="hover:text-yellow-400">HOW TO JOIN</a>
-            </nav>
-            <a href="https://refpa3665.com/L?tag=d_6236955m_45415c_&site=6236955&ad=45415" target="_blank" class="btn-gold px-5 py-2 rounded-lg text-sm shadow-lg tracking-wide uppercase">REGISTER / PLAY NOW</a>
-        </div>
+    <header>
+        <div class="logo">KEL<span>BET</span></div>
+        <a href="https://refpa3665.com/L?tag=d_6236955m_45415c_&site=6236955&ad=45415" target="_blank" class="btn-top">REGISTER NOW</a>
     </header>
 
-    <!-- Main Hero Banner -->
-    <section id="welcome" class="max-w-6xl mx-auto my-6 p-4">
-        <div class="bg-gradient-to-r from-yellow-500 to-amber-600 rounded-2xl p-8 text-black shadow-2xl flex flex-col md:flex-row items-center justify-between">
-            <div class="space-y-4 max
+    <div class="container">
+        
+        <!-- Welcome Offer Banner -->
+        <div class="hero">
+            <h2>100% FIRST DEPOSIT BONUS</h2>
+            <p>Get up to 30,000 LKR Bonus on your first deposit! Play Sports, Aviator & Casino Games.</p>
+            <a href="https://refpa3665.com/L?tag=d_6236955m_45415c_&site=6236955&ad=45415" target="_blank" class="btn-claim">CLAIM BONUS NOW</a>
+        </div>
+
+        <!-- Promo Code Section -->
+        <div class="promo-card">
+            <div class="promo-title">USE EXCLUSIVE PROMO CODE</div>
+            <div class="promo-code">KELBET</div>
+            <p style="font-size: 12px; color: #8b949e; margin-top: 8px;">* Use code <b>KELBET</b> during registration to activate your 100% bonus.</p>
+        </div>
+
+        <!-- Popular Games -->
+        <div class="section-title">POPULAR GAMES</div>
+        <div class="grid">
+            <div class="card">
+                <div class="card-title">✈️ AVIATOR</div>
+                <div class="card-desc">Popular Crash Game</div>
+                <a href="https://refpa3665.com/L?tag=d_6236955m_45415c_&site=6236955&ad=45415" target="_blank" class="btn-play">PLAY NOW</a>
+            </div>
+            <div class="card">
+                <div class="card-title">🚀 JET X</div>
+                <div class="card-desc">High Odds Rocket Game</div>
+                <a href="https://refpa3665.com/L?tag=d_6236955m_45415c_&site=6236955&ad=45415" target="_blank" class="btn-play">PLAY NOW</a>
+            </div>
+            <div class="card">
+                <div class="card-title">💣 MINES</div>
+                <div class="card-desc">Instant Cashout Game</div>
+                <a href="https://refpa3665.com/L?tag=d_6236955m_45415c_&site=6236955&ad=45415" target="_blank" class="btn-play">PLAY NOW</a>
+            </div>
+            <div class="card">
+                <div class="card-title">🏏 SPORTSBOOK</div>
+                <div class="card-desc">Cricket & Football Odds</div>
+                <a href="https://refpa3665.com/L?tag=d_6236955m_45415c_&site=6236955&ad=45415" target="_blank" class="btn-play">BET NOW</a>
+            </div>
+        </div>
+
+        <!-- How to Start -->
+        <div class="section-title">HOW TO GET STARTED</div>
+        <div class="steps">
+            <div class="step-box">
+                <div class="step-num">1</div>
+                <h4 style="margin-bottom: 5px;">REGISTER</h4>
+                <p style="font-size: 12px; color: #8b949e;">Click Register and create your Melbet account.</p>
+            </div>
+            <div class="step-box">
+                <div class="step-num">2</div>
+                <h4 style="margin-bottom: 5px;">PROMO CODE</h4>
+                <p style="font-size: 12px; color: #8b949e;">Enter code <b>KELBET</b> to get 100% bonus.</p>
+            </div>
+            <div class="step-box">
+                <div class="step-num">3</div>
+                <h4 style="margin-bottom: 5px;">DEPOSIT & PLAY</h4>
+                <p style="font-size: 12px; color: #8b949e;">Deposit via local banks or Crypto & win!</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Supported Payment Methods in Sri Lanka:</p>
+        <div class="payment-tags">
+            <span class="tag">eZ Cash</span>
+            <span class="tag">mCash</span>
+            <span class="tag">VISA / Mastercard</span>
+            <span class="tag">USDT / Crypto</span>
+            <span class="tag">Bank Transfer</span>
+        </div>
+        <p style="margin-top: 15px; font-size: 11px;">&copy; 2026 Kelbet Official. All rights reserved. 18+ Play Responsibly.</p>
+    </footer>
+
+</body>
+</html>
