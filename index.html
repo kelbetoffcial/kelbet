@@ -66,40 +66,26 @@
             max-width: 800px;
             margin: 0 auto;
         }
-        .hero {
-            background: linear-gradient(135deg, #ff9900, #f1c40f);
-            color: #000;
-            padding: 25px;
-            border-radius: 12px;
+
+        /* NEW GRAPHIC BANNER SECTION */
+        .graphic-banner-link {
+            display: block;
             margin-bottom: 25px;
-            box-shadow: 0 4px 15px rgba(241, 196, 15, 0.3);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(241, 196, 15, 0.3);
+            border: 2px solid #f1c40f;
+            transition: transform 0.3s ease;
         }
-        .hero h1 {
-            margin: 0 0 10px 0;
-            font-size: 26px;
-            font-weight: 800;
+        .graphic-banner-link:hover {
+            transform: scale(1.01);
         }
-        .hero p {
-            font-size: 14px;
-            margin-bottom: 15px;
-            font-weight: 600;
+        .graphic-banner-img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
-        .btn {
-            display: inline-block;
-            background-color: #131d2a;
-            color: #ffffff;
-            padding: 12px 25px;
-            font-size: 16px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 6px;
-            transition: 0.3s;
-            box-shadow: 0 3px 6px rgba(0,0,0,0.4);
-        }
-        .btn:hover {
-            background-color: #0b131f;
-            color: #f1c40f;
-        }
+
         .promo-box {
             background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://images.unsplash.com/photo-1596838132731-3301c3fd4317?q=80&w=1200');
             background-size: cover;
@@ -159,92 +145,3 @@
         }
         .game-card h3 {
             margin: 10px 0 5px 0;
-            font-size: 16px;
-            color: #ffffff;
-        }
-        .game-card p {
-            font-size: 11px;
-            color: #aaa;
-            margin-bottom: 12px;
-        }
-        .btn-play {
-            display: block;
-            background-color: #f1c40f;
-            color: #000;
-            padding: 8px 0;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            font-size: 13px;
-        }
-        footer {
-            margin-top: 40px;
-            padding: 20px;
-            font-size: 12px;
-            color: #666;
-            background-color: #070d15;
-        }
-    </style>
-</head>
-<body>
-
-    <!-- HEADER WITH LOGO AND REGISTER BUTTON -->
-    <header>
-        <div class="logo-container">
-            <div class="logo-icon">K</div>
-            <span class="logo-text">KELBET</span>
-        </div>
-        <a href="https://refpa3665.com/L?tag=d_6236955m_45415c_&site=6236955&ad=45415" class="btn-header-register" target="_blank">REGISTER</a>
-    </header>
-
-    <div class="container">
-        
-        <!-- HERO BANNER -->
-        <div class="hero">
-            <h1>100% FIRST DEPOSIT BONUS</h1>
-            <p>Get up to 30,000 LKR Bonus on your first deposit! Play Sports, Aviator & Casino Games.</p>
-            <a href="https://refpa3665.com/L?tag=d_6236955m_45415c_&site=6236955&ad=45415" class="btn" target="_blank">CLAIM BONUS NOW</a>
-        </div>
-
-        <!-- PROMO CODE BOX -->
-        <div class="promo-box">
-            <div class="promo-title">Use Exclusive Promo Code</div>
-            <div class="promo-code">KELBET</div>
-            <p class="promo-desc">* Use code <strong>KELBET</strong> during registration to activate your 100% bonus.</p>
-        </div>
-
-        <!-- POPULAR GAMES SECTION -->
-        <div class="section-title">POPULAR GAMES</div>
-        
-        <div class="games-grid">
-            <div class="game-card">
-                <h3>✈️ Aviator</h3>
-                <p>Crash Game</p>
-                <a href="https://refpa3665.com/L?tag=d_6236955m_45415c_&site=6236955&ad=45415" class="btn-play" target="_blank">PLAY NOW</a>
-            </div>
-            <div class="game-card">
-                <h3>⚽ Sports Betting</h3>
-                <p>Cricket, Football & More</p>
-                <a href="https://refpa3665.com/L?tag=d_6236955m_45415c_&site=6236955&ad=45415" class="btn-play" target="_blank">BET NOW</a>
-            </div>
-            <div class="game-card">
-                <h3>🎰 Live Casino</h3>
-                <p>Roulette & Blackjack</p>
-                <a href="https://refpa3665.com/L?tag=d_6236955m_45415c_&site=6236955&ad=45415" class="btn-play" target="_blank">PLAY NOW</a>
-            </div>
-            <div class="game-card">
-                <h3>🪙 Slots</h3>
-                <p>Jackpot Games</p>
-                <a href="https://refpa3665.com/L?tag=d_6236955m_45415c_&site=6236955&ad=45415" class="btn-play" target="_blank">SPIN NOW</a>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- FOOTER -->
-    <footer>
-        &copy; 2026 Kelbet Partner. All rights reserved. 18+ Only.
-    </footer>
-
-</body>
-</html>
