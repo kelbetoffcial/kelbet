@@ -1,55 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' data: http: https:;">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kelbet - Exclusive Welcome Bonus & Betting</title>
+    <title>Kelbet - Exclusive Welcome Bonus</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #0b131f;
-            color: #ffffff;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            padding: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px 30px;
             text-align: center;
+            max-width: 450px;
+            width: 100%;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
         }
-        .container {
-            padding: 50px 20px;
-        }
+
         h1 {
-            color: #ffd700;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+            font-size: 2.2rem;
+            color: #ffcc00;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
+
         p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
+            color: #e0e0e0;
             margin-bottom: 30px;
+            line-height: 1.5;
         }
+
         .btn {
             display: inline-block;
-            background-color: #28a745;
-            color: white;
-            padding: 15px 30px;
+            width: 100%;
+            padding: 16px 20px;
+            background: linear-gradient(45deg, #00b09b, #96c93d);
+            color: #ffffff;
             font-size: 1.2rem;
-            text-decoration: none;
-            border-radius: 5px;
             font-weight: bold;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-            transition: background-color 0.3s;
+            text-decoration: none;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 176, 155, 0.4);
+            transition: all 0.3s ease;
         }
+
         .btn:hover {
-            background-color: #218838;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 176, 155, 0.6);
+            background: linear-gradient(45deg, #96c93d, #00b09b);
+        }
+
+        .footer-note {
+            margin-top: 20px;
+            font-size: 0.85rem;
+            color: #a0a0a0;
         }
     </style>
 </head>
 <body>
-    <div class="container">
+
+    <div class="card">
         <h1>Welcome to Kelbet</h1>
         <p>Get your exclusive welcome bonus and start betting now!</p>
         
-        <!--  Melbet Affiliate Link  -->
+        <!-- Melbet Affiliate Link -->
         <a href="https://refpa3665.com/L?tag=d_6259562m_45415c_&site=6259562&ad=45415" class="btn" target="_blank">Join & Claim Bonus</a>
+        
+        <div class="footer-note">18+ | Terms & Conditions Apply</div>
     </div>
+
 </body>
 </html>
